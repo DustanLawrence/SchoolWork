@@ -11,10 +11,28 @@
     -->
 
     <style>
-	body{
-	background-color: #97B4BA;
+	h1{
+	text-align:center;
+	font-size:4.0em;
 	}
 	
+	body{
+	margin:50px 0px; padding:10px;
+    text-align:center;
+    align:center;
+	background-color: #97B4BA;
+	}	
+	div{
+	padding:20px;
+	font-size:2.0em;
+	}
+	input{
+    color:white;
+	 background-color:#0096FF;
+    font:bold;
+     font-size:1.1em;
+    } 
+     
 
     </style>
 
@@ -26,11 +44,15 @@
     </head>
     <body>
         <h1>Pick a Picture</h1>
+		<div>
+		<!-- using get to send to picapic2.php  -->
         <form action="picapic2.php" method="get">
-            <input type="radio" name="pic" value="car" id="car">Car<!--<label for="car"><img src=url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.VULsR6qyw_mkfi7EcKye9wHaD4%26pid%3DApi&f=1")></label>-->
-            <input type="radio" name="pic" value="truck" id="truck">Truck<!--<label for="a"><img src="Viktor_Pfeifer.JPG"></label>-->
-            <input type="radio" name="pic" value="motorcycle" id="motorcycle">Motor Cycle<!--<label for="a"><img src="Gandhi_spinning_1942.JPG"></label>-->
+		
+            <input type="radio" name="pic" value="car" id="car">Car<!--radio for car option -->
+            <input type="radio" name="pic" value="truck" id="truck">Truck<!--radio for truck option -->
+            <input type="radio" name="pic" value="motorcycle" id="motorcycle">Motorcycle<!--radio for motorcycle option -->
             <input type="submit">
         </form>
+		</div>
     </body>
 </html>

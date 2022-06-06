@@ -9,7 +9,7 @@
 CID Name Assignment
 
 What objectives are you demonstrating?
-
+*using GET *using PHP *if statement in PHP *printing to screen with php
 --> 
 
 <style>

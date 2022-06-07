@@ -73,7 +73,7 @@ if($pepp){$total+=2.99;
 print"<p>Pepperonni-$2.99</p>";}
 if($saus){$total+=2.99;
 print"<p>Sausage-$2.99</p>";}
-print"<p>Total Due: $$total</p>";
+print"<p><hr>Total Due: $$total</p>";
 
 ?>
 </body>

@@ -12,39 +12,37 @@
 
     <style>
 	body {
-  width: 850px;
-  margin: 0 auto;
-  background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst4.depositphotos.com%2F16122460%2F19971%2Fi%2F1600%2Fdepositphotos_199711036-stock-photo-slices-delicious-pizza-light-background.jpg&f=1&nofb=1);
-  background-color:#A5A79A;
-}
+    width: 850px;
+    margin: 0 auto;
+    background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst4.depositphotos.com%2F16122460%2F19971%2Fi%2F1600%2Fdepositphotos_199711036-stock-photo-slices-delicious-pizza-light-background.jpg&f=1&nofb=1);
+    background-color:#A5A79A;
+    }
 /*setting h1 color, size, and font */
-h1 {
+    h1 {
     color:#ce0000;
     font-size:2.8em;    
- }
-h2 {
-   color:#bb5511;  
-}
-p {
-  font:bold;
-  font-size:1.4em;
-}
-b {
-  font:bold;
-  font-size:1.4em;
-}
-
-input{
-  //color:white;
+    }
+    h2 {
+    color:#bb5511;  
+    }
+    p {
     font:bold;
-  font-size:1.4em;
-} 
-input[value=Submit]{
-  background-color:#0096FF;
-}
-input[value=Clear]{
-  background-color:red;
-}
+    font-size:1.4em;
+    }
+    b {
+    font:bold;
+    font-size:1.4em;
+    }
+	input{
+    font:bold;
+    font-size:1.4em;
+    } 
+    input[value="Order Pizza!"]{
+    background-color:#0096FF;
+    }
+	input[value=Clear]{
+    background-color:red;
+	}
     </style>
 
     <script>
@@ -55,27 +53,25 @@ input[value=Clear]{
     </head>
     <body>
   <h1>Pizza Orders Made Easy</h1>
-  <h2>Place Your Pizza Order Below</h2>
-  
-<form action="pizza.php" method="get">
-<b>Name:</b> <input id="cname" type="text" name="user" /><br /><br />
-<b>Pizza Size:</b><br />
-<!-- SIZE of pizza array from radio buttons -->
-
-  <input id="pSml"  type="radio" name="size" value="Small" />Small-$10.00<br />
-  <input id="pMed"  type="radio" name="size" value="Medium" checked />Medium-$12.00<br />
-  <input id="pLrg"  type="radio" name="size" value="Large" />Large-$14.00<br />
-<br />
-<b>Topping's: $2.50 each</b><br />
-  <!-- toppings array from checkbox buttons -->
-  <input id="mR" type="checkbox" name="rgb" value="Mushroom's" />Mushroom's<br />
-  <input id="oL" type="checkbox" name="rgb" value="Olives" />Olives<br />
-  <input id="pP" type="checkbox" name="rgb" value="Pepperonni" />Pepperonni<br />
-  <input id="sG" type="checkbox" name="rgb" value="Sausage" />Sausage<br />
-<br />
-<!-- Create Submit and clear buttons -->
-<input type="button" value="Submit" />
-<input type="reset" value="Clear"  />
-</form>
+  <h2>Place Your Pizza Order Below</h2>  
+	<form method="post" action="pizza.php">
+	<b>Name:</b> <input id="cname" type="text" name="name" /><br /><br />
+	<b>Pizza Size:</b><br />
+	<!-- SIZE of pizza array from radio buttons -->
+	  <input id="pSml"  type="radio" name="size" value="Small" />Small-$9.99<br />
+	  <input id="pMed"  type="radio" name="size" value="Medium" checked />Medium-$12.99<br />
+	  <input id="pLrg"  type="radio" name="size" value="Large" />Large-$15.99<br />
+	<br />
+	<b>Topping's: $2.99 each</b><br />
+	  <!-- toppings array from checkbox buttons -->
+	  <input id="mR" type="checkbox" name="mush" value="Mushroom's" />Mushroom's<br />
+	  <input id="oL" type="checkbox" name="oliv" value="Olives" />Olives<br />
+	  <input id="pP" type="checkbox" name="pepp" value="Pepperonni" />Pepperonni<br />
+	  <input id="sG" type="checkbox" name="saus" value="Sausage" />Sausage<br />
+	<br />
+	<!-- Create Submit and clear buttons -->
+	<input type="submit" value="Order Pizza!" />
+	<input type="reset" value="Clear"  />
+	</form>
     </body>
 </html>

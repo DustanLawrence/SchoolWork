@@ -64,7 +64,7 @@ if($size == 'Large'){
 //print top of invoice
 print "
 <h1>Pizza Orders Made Easy</h1><br />
-<h2>Reciept</h2>
+<h2>Receipt</h2>
 <p>Customer Name: $name </p>
 <p>Pizza Size: $size - $$total</p> 
 ";
@@ -75,7 +75,7 @@ print"<p>Mushroom's-$2.99</p>";
 if($oliv){$total+=2.99;
 print"<p>Olives-$2.99</p>";}
 if($pepp){$total+=2.99;
-print"<p>Pepperonni-$2.99</p>";}
+print"<p>Pepperoni-$2.99</p>";}
 if($saus){$total+=2.99;
 print"<p>Sausage-$2.99</p>";}
 print"<p><hr>Total Due: $$total</p>";

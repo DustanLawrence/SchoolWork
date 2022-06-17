@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>U09A Group Project</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel=stylesheet href="style3.css">
+<!--
+
+using CSS with images and text, creating navigation, 
+business logo and color scheme. 
+
+-->
+</head>
+<body>
+<!--logo header-->
+<header>
+<div id="header">
+    <div id="logo">
+        <img src="quackshacklogo.jpg" alt="logo" />
+    </div> 
+    <!--navigation bar-->   
+    <ul id="nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contactPage.html">Contact Us</a></li>
+    </ul>        
+</div>
+</header>
+<h1 id="location">Find A Location Near You!</h1>
+<div id="statedropdown">
+<!--dropdown-->
+<p><b>Choose your state:</b></p>
+<select id="select" onchange="show(this)">
+    <option value="">--Select--</option>
+</select>
+
+<!--display cities--> 
+<p id="output"></p>
+</div>
+
+<script>
+    
+    //JSON array for states
+    var locations =  {
+        "states" : [
+            "Washington", 
+            "Oregon", 
+            "California"
+        ],
+        //arrays for cities
+        "Washington" : [
+            "Bainbridge Island",
+            "Gig Harbor",
+            "Seattle"
+        ],
+
+        "Oregon" : [
+            "Bend",
+            "Newport",
+            "Portland"
+        ],
+        
+        "California" : [
+            "San Francisco",
+            "Santa Monica",
+            "Malibu" 
+        ],
+
+    };
+
+    //where to place populated list 
+    var ele = document.getElementById("select");
+
+    for (var i = 0; i < locations.states.length; i++) {
+        //use JSON array to populate select options
+        ele.innerHTML = ele.innerHTML + 
+        '<option value="' + locations.states[i] + '">' 
+        + locations.states[i] + '</option>';
+            }
+
+    function show() {
+        var output = document.getElementById("output");
+        var cities = "";
+        var element = ele.options[ele.selectedIndex];
+    
+        //gather and print list of cities
+        for( i = 0; i < locations[element.value].length; i++)
+                    {cities += (locations[element.value][i] + "<br />")}
+        
+            output.innerHTML = '<b>' + element.text + " " + 
+                            "locations:" + '<br /><br />' + cities;
+                                
+    }
+    
+    </script>
+    <div id="main">
+        <footer>
+            © 2022 Quack Shack All Rights Reserved. Menu items and pricing may vary by location and are subject to change.
+        </footer>  
+    </div>       
+</body>   
+</html>    
+

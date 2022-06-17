@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <!-- <link href="menu.css" rel="stylesheet"> -->
+    <link href="stylemenu.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <img src="quackshacklogo.jpg" class="imagelogo" alt="logo"  />
+            </div>    
+            <ul id="nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contactPage.html">Contact Us</a></li>
+            </ul>        
+        </div>
+    </header>
+    <h1>Quack Shack Menu</h1>
+    <aside>
+        <img src="Custom Size – 2.png">
+    </aside>
+    <form method="get" action="receipt.php">
+        <table class="center">
+            <tbody id="menuBody"></tbody>
+        </table>
+        <br />
+        <br />
+        <center>
+        <input id="button" type="submit" value="Get My Receipt">
+        <input type="reset" id="reset" value="Clear">
+        </center>
+    </form>
+    <script>
+        // Menu input data
+        // You can add or change any item, image, or price without changing calculations
+        const menuData = [
+            {
+                name: "Cheese and Quackers",
+                image: "cheeseandquackers.jpg",
+                alt: "item1 alt",
+                quantity: 0,
+                price: 8.99
+            },
+            {
+                name: "Fried Brussels Sprouts",
+                image: "17899.jpg",
+                alt: "item2 alt",
+                quantity: 0,
+                price: 10.95
+            },
+            {
+                name: "Caesar Salad",
+                image: "caesarsalad.jpg",
+                alt: "item3 alt",
+                quantity: 0,
+                price: 11.95
+            },
+            {
+                name: "The Quacken Burger",
+                image: "quackenburger.png",
+                alt: "item4 alt",
+                quantity: 0,
+                price: 16.99
+            },
+            {
+                name: "Kids Cheeseburger",
+                image: "menuresized.jpg",
+                alt: "item5 alt",
+                quantity: 0,
+                price: 11.95
+            },
+            {
+                name: "Ribeye Steak",
+                image: "ribeyesteak.jpg",
+                alt: "item6 alt",
+                quantity: 0,
+                price: 25.99
+            },
+            {
+                name: "Fried Chicken Plate",
+                image: "friedchicken.jpg",
+                alt: "item7 alt",
+                quantity: 0,
+                price: 14.99
+            },
+            {
+                name: "Kids Chicken Tenders",
+                image: "chickentenders.jpg",
+                alt: "item8 alt",
+                quantity: 0,
+                price: 9.95
+            },
+            {
+                name: "Chocolate Brownie",
+                image: "brownie.png",
+                alt: "item9 alt",
+                quantity: 0,
+                price: 8.99
+            },
+            {
+                name: "Hot Fudge Sundae",
+                image: "sundae.jpg",
+                alt: "item10 alt",
+                quantity: 0,
+                price: 6.95
+            },
+            {
+                name: "Pumpkin Pie",
+                image: "pumpkinpie.jpg",
+                alt: "item11 alt",
+                quantity: 0,
+                price: 8.25
+            },
+            {
+                name: "Milkshake",
+                image: "milkshake.jpg",
+                alt: "item12 alt",
+                quantity: 0,
+                price: 6.95
+            },
+            {
+                name: "Lemonade",
+                image: "ducks.jpg",
+                alt: "item13 alt",
+                quantity: 0,
+                price: 2.50
+            },
+            {
+                name: "Draft beer",
+                image: "draftbeer.png",
+                alt: "item14 alt",
+                quantity: 0,
+                price: 5.99
+            }
+        ];
+        const menuBody = document.getElementById('menuBody');
+        // Build a table
+        // Add rows and fill in data
+        menuData.forEach((item, index) => {
+            //Create table rows
+            // Loop to insert
+            // Rows are DOM objects
+            const tr = document.createElement('tr');
+            let td = document.createElement('td');
+            // readOnly prevents changes from being made
+            td.innerHTML = `<td><input type="text" name="n${index}" readOnly value="${item.name}"></td>`
+            tr.appendChild(td);
+            td = document.createElement('td');
+            td.innerHTML = `<img id="table" src="${item.image}" alt=${item.alt}>`;
+            tr.appendChild(td);
+            td = document.createElement('td');
+            td.innerHTML = `<td><input placeholder="How Many?" style="text-align:center; border:1px solid black; width:7em;" type="number" name="q${index}" min="0"></td>`;
+            tr.appendChild(td);
+            td = document.createElement('td');
+            td.innerHTML = `<td class="price"><input style="text-align:right;width:5em" type="text" name="p${index}" readOnly value="$${item.price.toFixed(2)}"></td>`;
+            tr.appendChild(td);
+            menuBody.appendChild(tr);
+        });
+        // document.getElementById("calculate").addEventListener("click", () => {
+        //     const rows = menuBody.querySelectorAll("tr");
+        //     console.log(rows);
+        //     rows.forEach((row) => {
+        //         console.log(row.querySelector("td").innerText);
+        //     });
+        // });
+    </script>
+    <center>
+    <footer>
+            © 2022 Quack Shack All Rights Reserved. Menu items and pricing may vary by location and are subject to
+            change.
+    </footer>
+    </center>
+</body>
+
+</html>

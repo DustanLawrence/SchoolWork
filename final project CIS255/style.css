@@ -1,0 +1,152 @@
+body {
+    background-color: #B0E0E6;
+    font-family:ravie;
+}
+#header { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 1200px;
+    height: 250px; 
+    background-color: #0e2f44;
+    border-radius: 100px;
+    
+}
+
+#logo {
+    display: grid;
+    place-items: center;
+}
+
+#nav {
+    width: 1000px;
+    height: 70px;
+}
+
+ul {
+    list-style-type: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border: 2px solid grey;
+    border-radius: 100px;
+    background-color: #FDE640  
+}
+
+
+li {
+    float: left;
+    margin: 10px;
+    margin-left: 22px; 
+}
+
+li a {
+    display: block;
+    color: #0e2f44;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px dashed black;
+    font-family: Ravie;
+    font-size: 15px;
+    width: 250px; 
+}
+
+li a:hover{
+    background-color: orange;
+    color: #FDE640
+}
+
+#main {
+    position: relative;
+    min-height: 775; 
+}
+/*
+#burger {
+    padding-bottom: 20px;
+}
+
+#burger img {
+    position: absolute;
+    z-index: 1; 
+    margin: 0 0 0 100;
+    border: 5px black solid;
+    border-radius: 100px; 
+}
+*/
+#table {
+    height:100px;
+    width:150px;
+    margin-right:20px;
+}
+
+#name { 
+    position: absolute;
+    z-index: 3; 
+    top: 95px;
+    left: 470px;
+    color: #008080;
+    font-family: Ravie;
+    font-size: 35px; 
+}
+.center {
+    display:block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+td {
+    table-layout:fixed;
+}
+/*
+table {
+    border:none;
+    border-spacing: 0;
+    border-collapse:collapse;
+}
+*/
+#footerContainer {
+    padding-bottom: 50px;
+}
+
+#footer {
+   position: absolute; 
+   margin: auto;
+   width: 60%;
+   border: 5px solid #FFFF00;
+   padding: 10px; 
+   border: 2px black solid; 
+   color: black;
+   text-align: center;
+   bottom: 0;
+   right: 280;
+   height: 15px; 
+
+    
+}
+input {
+    font-size:2em;
+    background-color:#B0E0E6;
+    border:none;
+    /* width:50px; */
+}
+#button {
+    padding:15px 32px;
+    background-color:#FDE640;
+    border-radius: 30px;
+}
+#reset {
+    padding:15px 32px;
+    background-color:#FDE640;
+    margin-left:10px;
+    border-radius:30px;
+}
+.imagelogo {
+    text-align:center;
+    display:block;
+    border-radius: 100px;
+}
+aside {
+    float:left;
+}

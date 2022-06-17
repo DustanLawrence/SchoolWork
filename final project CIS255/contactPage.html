@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>U09A Group Project</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel=stylesheet href="style2.css">
+<!--
+ 
+using CSS with images and text, creating navigation,
+business logo and color scheme.
+ 
+-->
+</head>
+<body>
+<!--logo header-->
+   <header>
+        <div id="header">
+            <div id="logo">
+                <img src="quackshacklogo.jpg" alt="logo"  />
+            </div>   
+<!--navigation bar-->   			
+            <ul id="nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="locations.html">Locations</a></li>
+            </ul>        
+        </div>
+    </header>
+     
+	<div >
+<!--Page title-->   
+       <h2 id="h2">The Quack Shack Contact Information</h2>
+	   <div style="float: left">
+ <!--Headquarters Address display-->   
+		<p id="hc"><strong>Headquarters Address:</strong><br>12345 Charming Lane<br>Seattle WA, 98101</p>
+<!--Headquarters Email Address display-->   
+		<p id="hc"><strong>Headquarters E-mail Address:</strong><br>thequackshack@gmail.com</p>
+<!--Headquarters phone display-->   
+		<p id="hc"><strong>Headquarters Phone Number:</strong><br>(555)555-5555</p>
+<!--Headquarters location link to google maps-->   
+		<p id="hc"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5379.698950693126!2d-122.35081580030389!3d47.60961649949095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906aae039bf0fb%3A0xd386c5610574bcc6!2sSeattle%20Waterfront%2C%20Seattle%2C%20WA!5e0!3m2!1sen!2sus!4v1654829780100!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+	</div>
+<div id="contactUs">
+<!--create contact form-->   
+<form id="contact" name="form" method="post" action="contactForm.php" onsubmit="required()">
+<h2 id="formh2"><ul>Contact US</ul><h2>
+<label for="text">Restaurant visited:</label>
+<!--create location selector-->   
+<select name="location" id="selector">
+	<option value="Seattle, WA">Seattle, WA</option>
+	<option value="Gig Harbor, WA">Gig Harbor, WA</option>
+	<option value="Bainbridge Island, WA">Bainbridge Island, WA</option>
+	<option value="Portland, OR">Portland, OR</option>
+	<option value="Newport, OR">Newport, OR</option>
+	<option value="Bend, OR">Bend, OR</option>
+	<option value="San Francisco, CA">San Francisco, CA</option>
+	<option value="Santa Monica, CA">Santa Monica, CA</option>
+	<option value="Malibu, CA">Malibu, CA</option>
+</select><br>
+
+	<label for="email">Enter your email *: </label>
+	<input type="email" id="email" name="email" required placeholder="Enter your Email" size="40"><br>
+	<br>
+	<input id="question"  type="radio" name="messInput" checked value="question" />I have a question
+	<input id="like"  type="radio" name="messInput" value="like"  />I like something
+	<input id="dislike"  type="radio" name="messInput" value="dislike" />I disliked something
+	<input id="suggestion"  type="radio" name="messInput" value="suggestion" />I have a suggestion<br />
+	<label for="text">Message</label>
+	<input type="text" id="mess" name="mess" required style="height:120px; width:800px;"> 
+<!--help us reach you section option-->   
+	<h2 id="formh2"><ul>HELP US REACH YOU (OPTIONAL)</ul></h2>
+<!--first name input--> 
+	<label for="name" >First Name</label>
+	<input type="text" id="fName" name="fName" placeholder="First Name">
+<!--last name input--> 
+	<label for="name" >Last Name</label>
+	<input type="text" id="lName" name="lName" placeholder="Last Name"> <br>
+<!--Address input--> 
+	<label for="addr" >Address&emsp;</label>
+	<input type="text" id="addr" name="addr" placeholder="address">
+	<label for="city" >City &emsp;&emsp;&emsp;</label>
+	<input type="text" id="city" name="city" placeholder="City">
+	<label for="state"  >State</label>
+	<input type="text" id="state" name="state" placeholder="State"> <br>
+<!--phone input with pattern matching--> 
+	<label for="phone"  >Phone #&emsp;</label>
+	<input type="tel" id="phone" name="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" placeholder="(555)555-5555"> <br>
+<!--submit and reset button--> 
+	<center>
+	<input id="submit" type="submit" value="Submit Form!"  />
+	<input id="reset" type="reset" value="Clear"  /> 
+	</center>
+	</form>
+</div>
+
+<!--create footer-->  
+<div>
+     <center>
+        <footer id="footer">
+           © 2022 Quack Shack All Rights Reserved. Menu items and pricing may vary by location and are subject to change.
+        </footer> 
+	</center>      
+</div>
+</body>	
+           
+		   
+</html>
